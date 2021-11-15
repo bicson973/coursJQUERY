@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="...">
+    <!-- La description : phrase qui s'affiche et décrit le site dans un resultat de moteur de recherche utile au référencement naturel -->
+    <meta name="keywords" content="...">
+    <!-- "Les mots-clefs" utiles pour les moteurs de recherche -->
+    <meta name="author" content="Séma">
+    <!-- Auteur de la page -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/fichier_type.css">
+    <!-- Ma feuille de style css externe -->
+    <title>Selecteur Jquery</title>
+    <!-- Titre du document qui s'affiche dans la barre de titre du navigateur -->
+</head>
+
+<body>
+    <!-- =================================== MENU NAVIGUATION =================================== -->
+    <nav class="navbar navbar-expand-lg navbar-darks bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="introduction.html" target="_blank">jQuery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- button pour le menu burger -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="introduction.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Sélecteurs</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active"href="01_selecteurs.html">Sélecteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Evenements</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../02_evenements/">Evenements</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Entrainement</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../03_entrainement/">Entrainement</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- =================================== EN-TETE DE PAGE =================================== -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h1 class="display-4">Cours jQuery/Sélecteurs</h1>
+                <p class="lead">Hello Tom and Jerry !</p>
+            </div>
+        </div>
+    </header>
+    <!-- =================================== CONTENU PRINCIPAL DE LA PAGE =================================== -->
+    <main class="container">
+        <div class="row mb-4">
+            <div class="col-4 bg-light text-center">
+                <h2>1/ Hello Tom and Jerry !</h2>
+                <figure class="text-center">
+                    <img src="img/Tom_et_Jerry.webp" class="img-fluid" alt="Tom et Jerry" style="width: 200px;">
+                    <figcaption>TOM ET JERRY</figcaption>
+                </figure>
+                <p>Paragraphe 1</p>
+            </div>
+            <!-- fin col -->
+            <div class="col-4 ">
+                <h2 class="mb-3">2/ Lorem</h2>
+                <ol type="a">
+                    <li>la fonction jquery <code>$()</code> est l'équivalent d'un document.querySelectorAll()</li>
+                    <li>la méthode <code>.eq()</code> permet de sélectionner en jQuery un indice ou une collection d'objet</li>
+                    <li>la méthode <code>.html()</code> remplace innerHTML pour récupérer ou redéfinir un contenu d'élément</li>
+                    <li>la méthode <code>.css()</code> applique des changements en css en remplacement de style()</li>
+                </ol>
+            </div>
+            <!-- fin col -->
+            <div class="col-4 bg-light ">
+                <h2>3/ Hello Tom and Jerry !</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <!-- fin col -->
+        </div>
+        <!-- fin row -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <p>paragraphe 4</p>
+            </div>
+            <!-- fin col -->
+            <div class="col-12 bg-light ">
+                <p><strong class="bg-secondary">Lorem iLorem, ippsum dolor sit.</strong> consectetur adipisicing elit. Quan commodi animi sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime <strong class="bg-primary">vitae doloremque eligendi</strong> rem harum ipsum dolor sit amet
+                    <strong class="bg-secondary">Lorem ipsum dolor sit.</strong>
+                </p>
+            </div>
+            <!-- fin col -->
+        </div>
+        <!-- fin row -->
+    </main>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- jQuery JavaScript Library v3.6.0 en local -->
+    <script src="../coursJQUERY/jquery-3.6.0.min.js"></script>
+
+    <script>
+        let lesP = document.getElementsByTagName('p');
+        console.log(lesP);
+
+        // let enJs = document.getElementsByTagName('p') [0].innerHTML = ' Coucou  du Javascript';
+        // console.log(enJs);
+
+        //meme chose en jQuery
+        //Je change le texte du 1er "p"
+        $('p:first').text('Je change le texte de mon premier p avec jQuery');
+
+        //Je change le texte du 2eme "p"
+        $('p:eq(1)').text('je change le texte du second p');
+
+        //2- Sélection en Js
+        // console.log(document.getElementsByTagName('h2'));
+        // //j'appelle et j'affiche mon h2 avec query selector et innerHTML
+        // console.log(document.querySelector('h2').innerHTML);
+        // console.log('');
+
+        //sélection en jQuery
+        console.log($('h2'));
+        console.log($('h2')[0].innerHTML);
+
+        //3- fonction $() et les méthodes eq(), html ()
+        //a: la fonction -> $() est équivalent de -> document.querySelectorAll()
+        //b: la méthode -> eq() permet de sélectionner en jQuery un indice ou une collection d'objet.
+        //c: la méthode -> html() remplace innerHTML pour récupérer ou redéfinir un contenu de balises ou d'éléments.
+
+        console.log($('h2').eq(1).html());
+
+        // je redéfini le contenu du second h2
+
+        $('h2').eq(1).html('<a href = "#" >Un titre h2 avec un lien vers jQuery </a>');
+
+        // console.log($('p').eq(3).text());
+
+        // $('p').eq(3).text('et ici je change le texte du paragraphe 4 indice 3');
+
+        // $('p').html('<3');
+
+        //Je met tout cela en variable.
+
+        let leP4 = $('p').eq(3);
+        console.log(leP4);
+
+        //4- La méthode css() applique des changements en css en remplacement du style.
+
+        $('li').css("color", "purple");
+
+        $('p').css({
+            'color': 'dark',
+            'background': '#e6ce3e',
+            'border': '2px solid black',
+            'padding': '20px',
+        });
+        
+        //5 les méthodes .append() et .prepend()
+
+        $('p').eq(2).prepend('<span class = "bg-light">Coucou! du texte au début d\'un élément<br></span> ');
+
+        $('p').eq(2).append('<span class = "bg-success"><br>Coucou! du texte a la fin  d\'un élément</span> ');
+
+        //je sélectionne le ou les éléments qui ont la classe .lead
+
+        console.log($('.lead'));
+
+        $('.lead').css({
+            'background-color': '#e6ce3e',
+            'color': 'dark',
+            'margin-left': '100px',
+        });
+
+        // console.log($('h1 ,h2').prepend('<span>*</span> '));
+        $('h1 ,h2').prepend(' * ');
+
+        //6 manipulation de classes, avec addClass(), removeClass, toggleClass(), hasClass(). 
+
+        console.log($('code'));
+
+        $('strong').addClass('bg-light');
+
+        $('strong').eq(1).addClass('bg-light');
+
+        $('strong').eq(2).removeClass('bg-secondary');
+
+        // hasclass() renvoie true ou false : a-t-il la classe ?
+        console.log($("p").eq(0).hasClass("lead"));
+
+        // toggleClass()cf. 01-evenements.html (cf. = voir);
+
+        // 7- manipulation d'attributs avec .attr() et .removeAttr()
+
+        // Ajouter un attribut avec attr()
+        $("h1").eq(0).attr("title", "write less do more"); 
+
+        console.info($("#toutou"));
+
+        console.log($("strong"));
+
+        $("h2").eq(0).removeAttr("class");
+        // Enlever un attribut la ou les valeurs de l'attribut. 
+
+        $("strong:eq(0), strong:eq(1)").removeAttr("class");
+        // Enlever les attributs de deux éléments dans un tableau.
+
+        // 8- Manipulation des parents et des enfants.. 
+        console.log($("figure").find("img"));
+        $("figure").find("img").attr("title", "Tom et Jerry mes héros préférés");
+
+        // PARTIE EXERCICE : 
+
+        // Exo 1 : dans une variable monAlt récupérer l'attribut alt de img
+        let monAlt = $('figure').find('img').attr('alt');
+        console.log(monAlt);
+
+        // Exo 2 : afficher le contenu de cette variable dans figcaption 
+        $('figcaption').html(monAlt);
+
+
+    </script>
+
+</body>
+
+</html>
