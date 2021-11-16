@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="...">
+    <!-- La description : phrase qui s'affiche et décrit le site dans un resultat de moteur de recherche utile au référencement naturel -->
+    <meta name="keywords" content="...">
+    <!-- "Les mots-clefs" utiles pour les moteurs de recherche -->
+    <meta name="author" content="Séma">
+    <!-- Auteur de la page -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/02_evenements.css">
+    <!-- Ma feuille de style css externe -->
+    <title>Jquery - Evenements</title>
+    <!-- Titre du document qui s'affiche dans la barre de titre du navigateur -->
+</head>
+
+<body>
+    <!-- =================================== MENU NAVIGUATION =================================== -->
+    <nav class="navbar navbar-expand-lg navbar-darks bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="introduction.html" target="_blank">jQuery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- button pour le menu burger -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="introduction.html"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Sélecteurs</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active" href="01_selecteurs.html">Sélecteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Evenements</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="02_evenements.html">Evenements</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Entrainement</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../03_entrainement/">Entrainement</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- =================================== EN-TETE DE PAGE =================================== -->
+    <header class="container-fluid p-2 text-center">
+        <h1 class="display-4">Cours jQuery</h1>
+        <p class="lead">Vive le vent d'hiver</p>
+    </header>
+    <!-- =================================== CONTENU PRINCIPAL DE LA PAGE =================================== -->
+    <div class="container">
+        <div class="row border border-dark mt-5 p-4">
+            <div class="col-2 text-center">
+                <button id="btn1" class="btn btn-outline-primary" title="btn1">Bouton 1</button>
+                <p class="mt-2">
+                    En cliquant sur le bouton j'affiche un surlignement et une couleur rouge dans le <code>h1</code>.
+                </p>
+            </div>
+            <div class="col-2 text-center">
+                <button id="btn2" class="btn btn-outline-danger" title="btn2">Bouton 2</button>
+                <p class="mt-2">
+                    En double-cliquant sur le bouton j'affiche une couleur de fond bleu dans le <code>body</code>.
+                </p>
+            </div>
+            <div class="col-2 text-center">
+                <button id="btn3" class="btn btn-outline-success" title="btn3">Bouton 3</button>
+                <p class="mt-2">
+                    En cliquant sur le bouton j'affiche et désafiche tout les paragraphes de la page.
+                </p>
+            </div>
+            <div class="col-2 text-center">
+                <button id="btn4" class="btn btn-outline-dark" title="btn4">Bouton 4</button>
+                <p class="mt-2">
+                    En cliquant sur le bouton j'affiche et désafiche la couleur jaune sur le <code>h1</code>.
+                </p>
+            </div>
+            <div class="col-2 text-center">
+                <button id="btn5" class="btn btn-outline-warning" title="btn5">Bouton 5</button>
+                <p class="mt-2">
+                    En passant la sourie dans la zone du boutton 5 j'affiche la couleur jaune et en quittant la zone la couleur jaune s'en va.
+                </p>
+            </div>
+            <div class="col-2 text-center">
+                <button id="btn6" class="btn btn-outline-info" title="btn6">Bouton 6</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- jQuery JavaScript Library v3.6.0 en local -->
+    <script src="../coursJQUERY/jquery-3.6.0.min.js"></script>
+
+    <script src="02_evenements.js"></script>
+    <!-- Ma feuille javascript -->
+
+    
+</body>
+
+</html>
